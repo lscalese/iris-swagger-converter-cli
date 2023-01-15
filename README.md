@@ -28,7 +28,7 @@ Example using an URL :
 ```ObjectScript
     Set webConverter = ##class(dc.swaggerconverter.WebConverter).%New()
     Set sc = webConverter.ConvertByURL("https://petstore.swagger.io/v2/swagger.json", .OpenAPIV3)
-    If +sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
+    If ''sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
 ```
 
 
@@ -37,7 +37,7 @@ Example to convert from a file:
 ```ObjectScript
     Set webConverter = ##class(dc.swaggerconverter.WebConverter).%New()
     Set sc = webConverter.ConvertFromFile("/home/irisowner/irisdev/spec.json", .OpenAPIV3)
-    If +sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
+    If ''sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
 ```
 
 Another example from a file : 
@@ -46,7 +46,7 @@ Another example from a file :
     Set webConverter = ##class(dc.swaggerconverter.WebConverter).%New()
     Set webConverter.specification = ##class(dc.swaggerconverter.WebConverter).fileToDynamic("/home/irisowner/irisdev/spec.json")
     Set sc = webConverter.Convert(.OpenAPIV3)
-    If +sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
+    If ''sc Do ##class(%JSON.Formatter).%New().Format(OpenAPIV3)
 ```
 
 If you prefer use your own swagger converter instance, set these nodes with your configuration : 
