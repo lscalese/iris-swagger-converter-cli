@@ -106,7 +106,7 @@ ClassMethod fileToDynamic(path As %String) As %DynamicObject
 ClassMethod AddSSLConfig(name As %String)
 {
     New $NAMESPACE
-    set $namespace="%SYS", name="DefaultSSL" do:'##class(Security.SSLConfigs).Exists(name) ##class(Security.SSLConfigs).Create(name)
+    set $namespace="%SYS" do:'##class(Security.SSLConfigs).Exists(name) ##class(Security.SSLConfigs).Create(name)
     Quit
 }
 
