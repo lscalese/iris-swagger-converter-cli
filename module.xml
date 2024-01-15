@@ -3,7 +3,7 @@
   <Document name="swagger-converter-cli.ZPM">
     <Module>
       <Name>swagger-converter-cli</Name>
-      <Version>0.0.2</Version>
+      <Version>0.0.3</Version>
       <Description>Client for swagger converter</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
